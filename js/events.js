@@ -132,30 +132,50 @@
     // }
     
 
-for( i=0; i < 4; i++ ){
-    let div1El = document.createElement('div');
-    div1El.classList="row";
-    document.body.appendChild(div1El);
-    for( j = 0; j< 4; j++){
-        let div2El = document.createElement('div');
-        div2El.classList="column";
-        div2El.style.height ='200px';
-        div2El.style.width ='400px';
-        div2El.style.border = "thick solid #0000CE"
-        div2El.style.backgroundColor =setBg();
-        div1El.appendChild(div2El);
-        div2El.addEventListener('mouseover', ()=>{
-            div2El.style.backgroundColor =setBg();
+// for( i=0; i < 4; i++ ){
+//     let div1El = document.createElement('div');
+//     div1El.classList="row";
+//     document.body.appendChild(div1El);
+//     for( j = 0; j< 4; j++){
+//         let div2El = document.createElement('div');
+//         div2El.classList="column";
+//         div2El.style.height ='200px';
+//         div2El.style.width ='400px';
+//         div2El.style.border = "thick solid #0000CE"
+//         div2El.style.backgroundColor =setBg();
+//         div1El.appendChild(div2El);
+//         div2El.addEventListener('mouseover', ()=>{
+//             div2El.style.backgroundColor =setBg();
         
-        })
+//         })
+
+//     }
+// }
+
+// function setBg() {
+//     const randomColor = Math.floor(Math.random()*16777215).toString(16);
+//     return "#" + randomColor;
+    
+//   }
+
+
+for(i =0; i < 1; i++){
+    let rowdiv = document.createElement('div');
+    rowdiv.classList ="row";
+    document.body.appendChild(rowdiv);
+    for(j=1; j < 11; j++){
+        let columndiv = document.createElement("div");
+        columndiv.style.height ='200px';
+        columndiv.style.width ='400px';
+        columndiv.classList = "column";
+        rowdiv.appendChild(columndiv);
+        for(t = 0; t < 1; t++){
+        let imgEl = document.createElement('img');
+        imgEl.src =`img/${j}.jpg`;
+        imgEl.style.width='12rem';
+        columndiv.appendChild(imgEl);
+        }
+
 
     }
 }
-
-function setBg() {
-    const randomColor = Math.floor(Math.random()*16777215).toString(16);
-    return "#" + randomColor;
-    
-  }
-
-  
